@@ -6,7 +6,7 @@
 /*   By: rshin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:10:44 by rshin             #+#    #+#             */
-/*   Updated: 2025/01/21 15:11:29 by rshin            ###   ########.fr       */
+/*   Updated: 2025/01/21 16:32:24 by rshin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,72 @@
 #include <string.h>
 
 #include "main.h"
+/*
+int	main(void) // gnl loop till eof
+{
+	char	*line;
+	int		fd;
 
-int	main(void)
+	fd = open("test", O_RDONLY);
+	line = "";
+	while (line != NULL)
+	{
+		line = get_next_line(fd);
+		if (line)
+		{
+			printf("%s", line);
+			free(line);
+//			printf(GREEN"main : MEM free at %p\n"RESET, line);
+			line = "";
+		}
+	}
+	printf("%s", line);
+	close(fd);
+	return (0);
+}
+
+int	main(void) // gnl loop till eof | two files
+{
+	char	*line;
+	int		fd1;
+	int		fd2;
+
+	fd1 = open("test", O_RDONLY);
+	fd2 = open("test2", O_RDONLY);
+	line = "";
+	while (line != NULL)
+	{
+		line = get_next_line(fd1);
+		if (line)
+		{
+			printf("%s", line);
+			free(line);
+//			printf(GREEN"main : MEM free at %p\n"RESET, line);
+			line = "";
+		}
+		line = get_next_line(fd2);
+		if (line)
+		{
+			printf("%s", line);
+			free(line);
+//			printf(GREEN"main : MEM free at %p\n"RESET, line);
+			line = "";
+		}
+	}
+	printf("%s", line);
+	close(fd1);
+	close(fd2);
+	return (0);
+}
+
+int	main(void) // wrong fd after 2 gnl | restart | gnl loop
 {
 	char	*line;
 	int		fd;
 	int		count;
 
 	count = 0;
-	fd = open("../tests/read_error.txt", O_RDONLY);
+	fd = open("test", O_RDONLY);
 	line = "";
 	while (line != NULL)
 	{
@@ -43,7 +100,7 @@ int	main(void)
 	}
 	printf("%s", line);
 	close(fd);
-	fd = open("../tests/read_error.txt", O_RDONLY);
+	fd = open("test", O_RDONLY);
 	line = "";
 	while (line != NULL)
 	{
@@ -59,4 +116,4 @@ int	main(void)
 	printf("%s", line);
 	close(fd);
 	return (0);
-}
+}*/
