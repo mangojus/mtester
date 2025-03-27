@@ -6,7 +6,7 @@
 /*   By: rshin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:10:44 by rshin             #+#    #+#             */
-/*   Updated: 2025/01/21 16:32:24 by rshin            ###   ########.fr       */
+/*   Updated: 2025/03/27 16:18:14 by rshin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <fcntl.h>
 #include <string.h>
 
-#include "main.h"
+#include "universal.h"
 /*
 int	main(void) // gnl loop till eof
 {
